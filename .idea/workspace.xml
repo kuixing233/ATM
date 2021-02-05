@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f694c6b-e283-449e-b0a7-edf02c7106df" name="Default Changelist" comment="">
+    <list default="true" id="9f694c6b-e283-449e-b0a7-edf02c7106df" name="Default Changelist" comment="README完成">
+      <change afterPath="$PROJECT_DIR$/conf/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/db_handle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/bank_interface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/shop_interface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/user_interface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,6 +44,35 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
+  <component name="RunManager">
+    <configuration name="start" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ATM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/start.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.start" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -42,8 +85,16 @@
       <updated>1611812260660</updated>
       <workItem from="1611812262750" duration="601000" />
       <workItem from="1612493183730" duration="4691000" />
-      <workItem from="1612499311474" duration="2829000" />
+      <workItem from="1612499311474" duration="4302000" />
     </task>
+    <task id="LOCAL-00001" summary="README完成">
+      <created>1612502184070</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612502184070</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -51,17 +102,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="更新README" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新README" />
+    <MESSAGE value="README完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="README完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="230" y="43" width="1089" height="788" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612493990241">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="230" y="43" width="1089" height="788" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1549.831@0.0.1549.831" timestamp="1612493990241" />
-    <state x="312" y="0" key="CommitChangelistDialog2" timestamp="1612501877207">
+    <state x="312" y="0" key="CommitChangelistDialog2" timestamp="1612502189210">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state x="312" y="0" key="CommitChangelistDialog2/0.0.1549.831@0.0.1549.831" timestamp="1612501877207" />
+    <state x="312" y="0" key="CommitChangelistDialog2/0.0.1549.831@0.0.1549.831" timestamp="1612502189210" />
     <state x="449" y="128" key="EnvironmentVariablesDialog" timestamp="1612494693444">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
@@ -74,17 +126,36 @@
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="424" y="298" key="Github.ShareDialog/0.0.1549.831@0.0.1549.831" timestamp="1612499578541" />
+    <state width="1496" height="199" key="GridCell.Tab.0.bottom" timestamp="1612503613179">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1496" height="199" key="GridCell.Tab.0.bottom/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612503613179" />
+    <state width="1496" height="199" key="GridCell.Tab.0.center" timestamp="1612503613179">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1496" height="199" key="GridCell.Tab.0.center/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612503613179" />
+    <state width="1496" height="199" key="GridCell.Tab.0.left" timestamp="1612503613178">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1496" height="199" key="GridCell.Tab.0.left/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612503613178" />
+    <state width="1496" height="199" key="GridCell.Tab.0.right" timestamp="1612503613179">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1496" height="199" key="GridCell.Tab.0.right/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612503613179" />
     <state x="156" y="0" key="SettingsEditor" timestamp="1612495837001">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="156" y="0" key="SettingsEditor/0.0.1549.831@0.0.1549.831" timestamp="1612495837001" />
-    <state x="267" y="88" key="Vcs.Push.Dialog.v2" timestamp="1612501891759">
+    <state x="267" y="88" key="Vcs.Push.Dialog.v2" timestamp="1612502194316">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state x="267" y="88" key="Vcs.Push.Dialog.v2/0.0.1549.831@0.0.1549.831" timestamp="1612501891759" />
+    <state x="267" y="88" key="Vcs.Push.Dialog.v2/0.0.1549.831@0.0.1549.831" timestamp="1612502194316" />
     <state x="532" y="317" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612501544353">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="532" y="317" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1549.831@0.0.1549.831" timestamp="1612501544353" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ATM$start.coverage" NAME="start Coverage Results" MODIFIED="1612503613167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
