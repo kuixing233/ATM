@@ -19,3 +19,14 @@ def withdraw_interface(username, money):
         return True, f'用户{username} 提现金额{money}成功, 手续费为：{money * 0.05}￥'
 
     return False, '余额不足，请重新输入'
+
+
+# 还款接口
+def repay_interface(username, money):
+    user_dic = db_handle.select(username)
+
+    user_dic['balance'] += money
+
+    db_handle.save(user_dic)
+
+    return True, f"用户[{username}] 还款{money}￥ 成功, 当前额度为：{user_dic['balance']}"

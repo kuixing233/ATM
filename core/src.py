@@ -91,8 +91,25 @@ def withdraw():
 # 5、还款功能
 @common.login_auth
 def repay():
-    pass
+    while True:
+        input_money = input('请输入还款金额：').strip()
 
+        if not input_money.isdigit():
+            print('请输入正确的金额！')
+            continue
+
+        input_money = int(input_money)
+
+        if input_money > 0:
+            flag , msg = bank_interface.repay_interface(
+                login_user, input_money
+            )
+
+            if flag:
+                print(msg)
+                break
+        else:
+            print('请输入正确的金额！')
 
 # 6、转账功能
 @common.login_auth
