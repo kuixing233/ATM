@@ -111,10 +111,32 @@ def repay():
         else:
             print('请输入正确的金额！')
 
+
 # 6、转账功能
 @common.login_auth
-def tranfer():
-    pass
+def transfer():
+    while True:
+        to_user = input('请输入接收人账号：')
+        input_money = input('请输入转账金额：')
+
+        if not input_money.isdigit():
+            print('请输入正确的金额！')
+            continue
+
+        input_money = int(input_money)
+
+        if input_money > 0:
+            flag, msg = bank_interface.transfer_interface(
+                login_user, to_user, input_money
+            )
+
+            if flag:
+                print(msg)
+                break
+            else:
+                print(msg)
+        else:
+            print('请输入正确的金额！')
 
 
 # 7、查看流水
@@ -146,7 +168,7 @@ func_dic = {
     '3': check_balance,
     '4': withdraw,
     '5': repay,
-    '6': tranfer,
+    '6': transfer,
     '7': check_flow,
     '8': shopping,
     '9': check_shop_car,
