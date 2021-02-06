@@ -21,7 +21,7 @@ def select(user_name):
             return user_dic
 
 
-# 保存数据
+# 保存数据(更新数据)
 def save(user_dic):
     username = user_dic.get('username')
     user_path = os.path.join(
