@@ -4,6 +4,7 @@
 """
 
 from db import db_handle
+from lib import common
 
 
 # 注册接口
@@ -16,6 +17,8 @@ def register_interface(username, password, balance=15000):
         return False, '用户已存在'
 
     # 用户不存在
+    password = common.get_pwd_md5(password)
+
     user_dic = {
         'username': username,
         'password': password,
@@ -37,6 +40,7 @@ def register_interface(username, password, balance=15000):
 def login_interface(username, password):
     user_dic = db_handle.select(username)
     if user_dic:
+        password = common.get_pwd_md5(password)
         if password == user_dic.get('password'):
             return True, f'用户 [{username}] 登录成功！'
         return False, '密码错误'
