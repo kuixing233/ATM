@@ -1,10 +1,34 @@
-'''
+"""
 用户视图层
-'''
+"""
+
+
+from interface import user_interface
+
 
 # 1、注册功能
 def register():
-    pass
+    while True:
+        # 1）让用户输入用户名与密码进行校验
+        username = input("请输入用户名：").strip()
+        password = input("请输入密码：").strip()
+        re_password = input("请确认密码：").strip()
+
+        if password == re_password:
+            flag, msg = user_interface.register_interface(
+                username, password
+            )
+
+        # 注册成功，结束
+        if flag:
+            print(msg)
+            break;
+
+        # 注册失败，重新进入
+        else:
+            print(msg)
+
+
 # 2、登录功能
 def login():
     pass
@@ -73,6 +97,5 @@ def run():
             print("请输入正确的功能编号！")
             continue
 
-
-        func_dic.get(choice)
+        func_dic.get(choice)()
 
