@@ -4,6 +4,7 @@
 
 
 from interface import user_interface
+from lib import common
 
 
 # 定义一个全局变量，保存用户登录状态
@@ -23,19 +24,18 @@ def register():
                 username, password
             )
 
-        # 注册成功，结束
-        if flag:
-            print(msg)
-            break;
+            # 注册成功，结束
+            if flag:
+                print(msg)
+                break
 
-        # 注册失败，重新进入
-        else:
-            print(msg)
+            # 注册失败，重新进入
+            else:
+                print(msg)
 
 
 # 2、登录功能
 def login():
-
     while True:
         username = input('请输入用户名：').strip()
         password = input('请输入密码：').strip()
@@ -55,26 +55,46 @@ def login():
 
 
 # 3、查看余额
+@common.login_auth
 def check_balance():
     pass
+
+
 # 4、提现功能
+@common.login_auth
 def withdraw():
     pass
+
+
 # 5、还款功能
+@common.login_auth
 def repay():
     pass
+
+
 # 6、转账功能
+@common.login_auth
 def tranfer():
     pass
+
+
 # 7、查看流水
+@common.login_auth
 def check_flow():
     pass
+
+
 # 8、购物功能
+@common.login_auth
 def shopping():
     pass
+
+
 # 9、查看购物车
 def check_shop_car():
     pass
+
+
 # 10、管理员功能
 def admin():
     pass
@@ -90,7 +110,7 @@ func_dic = {
     '6': tranfer,
     '7': check_flow,
     '8': shopping,
-    '9': check_shop_car(),
+    '9': check_shop_car,
     '10': admin,
 }
 
@@ -120,4 +140,3 @@ def run():
             continue
 
         func_dic.get(choice)()
-

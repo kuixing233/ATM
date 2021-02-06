@@ -15,5 +15,3 @@ from core import src
 # 开始执行项目函数
 if __name__ == '__main__':
     src.run()
-
-    # 1、先执行用户视图层
