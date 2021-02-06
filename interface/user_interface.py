@@ -46,3 +46,9 @@ def login_interface(username, password):
         return False, '密码错误'
 
     return False, '用户不存在'
+
+
+# 查看余额接口
+def check_bal_interface(username):
+    user_dic = db_handle.select(username)
+    return user_dic['balance']

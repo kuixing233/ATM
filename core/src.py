@@ -57,7 +57,12 @@ def login():
 # 3、查看余额
 @common.login_auth
 def check_balance():
-    pass
+
+    balance = user_interface.check_bal_interface(
+        login_user
+    )
+
+    print(f'用户{login_user} 账户余额为：{balance}')
 
 
 # 4、提现功能
