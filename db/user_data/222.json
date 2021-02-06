@@ -1,1 +1,1 @@
-{"username": "222", "password": "2b25c9aed2b4d7bcaa24b269e12648ba", "balance": 15000, "flow": [], "shop_car": {}, "locked": false}
+{"username": "222", "password": "2b25c9aed2b4d7bcaa24b269e12648ba", "balance": 14940, "flow": ["用户消费金额[30￥]", "用户消费金额[30￥]"], "shop_car": {"鸡米花": [5, 3], "脆皮鸡米饭": [10, 1], "鸭腿饭": [15, 2], "灌汤包": [30, 1]}, "locked": false}

@@ -71,3 +71,18 @@ def transfer_interface(username, to_username, money):
 # 查看流水
 def check_flow(username):
     return db_handle.select(username).get('flow')
+
+
+# 支付接口
+def pay_interface(login_user, cost):
+    user_dic = db_handle.select(login_user)
+
+    if user_dic.get('balance') >= cost:
+        user_dic['balance'] -= cost
+
+        flow = f'用户消费金额[{cost}￥]'
+        user_dic['flow'].append(flow)
+
+        db_handle.save(user_dic)
+        return True
+    return False

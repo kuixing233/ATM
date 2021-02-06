@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f694c6b-e283-449e-b0a7-edf02c7106df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/user_data/111.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/admin_interface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/src.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/user_data/222.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/user_data/222.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/user_data/你好.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/user_data/芜湖南通.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/bank_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/bank_interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/user_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/user_interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/shop_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/shop_interface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,8 +148,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.start" />
-        <item itemvalue="Python.fff" />
         <item itemvalue="Python.src" />
+        <item itemvalue="Python.fff" />
         <item itemvalue="Python.settings" />
       </list>
     </recent_temporary>
@@ -175,7 +169,7 @@
       <workItem from="1612499311474" duration="7602000" />
       <workItem from="1612579059803" duration="4373000" />
       <workItem from="1612583447537" duration="3489000" />
-      <workItem from="1612587373394" duration="6674000" />
+      <workItem from="1612587373394" duration="10417000" />
     </task>
     <task id="LOCAL-00001" summary="README完成">
       <created>1612502184070</created>
@@ -247,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612590982156</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="管理员功能">
+      <created>1612599564633</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1612599564633</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,18 +280,19 @@
     <MESSAGE value="提现功能" />
     <MESSAGE value="还款功能" />
     <MESSAGE value="转账功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="转账功能" />
+    <MESSAGE value="管理员功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="管理员功能" />
   </component>
   <component name="WindowStateProjectService">
     <state x="230" y="43" width="1089" height="788" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612493990241">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="230" y="43" width="1089" height="788" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1549.831@0.0.1549.831" timestamp="1612493990241" />
-    <state x="229" y="0" key="CommitChangelistDialog2" timestamp="1612590981046">
+    <state x="312" y="0" key="CommitChangelistDialog2" timestamp="1612599563308">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="229" y="0" key="CommitChangelistDialog2/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612590981046" />
-    <state x="312" y="0" key="CommitChangelistDialog2/0.0.1549.831@0.0.1549.831" timestamp="1612502189210" />
+    <state x="312" y="0" key="CommitChangelistDialog2/0.0.1549.831@0.0.1549.831" timestamp="1612599563308" />
     <state x="449" y="128" key="EnvironmentVariablesDialog" timestamp="1612494693444">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
@@ -303,26 +305,26 @@
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="424" y="298" key="Github.ShareDialog/0.0.1549.831@0.0.1549.831" timestamp="1612499578541" />
-    <state width="1496" height="199" key="GridCell.Tab.0.bottom" timestamp="1612599415594">
+    <state width="1496" height="252" key="GridCell.Tab.0.bottom" timestamp="1612603692598">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="199" key="GridCell.Tab.0.bottom/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612593872169" />
-    <state width="1496" height="199" key="GridCell.Tab.0.bottom/0.0.1549.831@0.0.1549.831" timestamp="1612599415594" />
-    <state width="1496" height="199" key="GridCell.Tab.0.center" timestamp="1612599415594">
+    <state width="1496" height="252" key="GridCell.Tab.0.bottom/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612603692598" />
+    <state width="1496" height="199" key="GridCell.Tab.0.bottom/0.0.1549.831@0.0.1549.831" timestamp="1612599890168" />
+    <state width="1496" height="252" key="GridCell.Tab.0.center" timestamp="1612603692598">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="199" key="GridCell.Tab.0.center/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612593872168" />
-    <state width="1496" height="199" key="GridCell.Tab.0.center/0.0.1549.831@0.0.1549.831" timestamp="1612599415594" />
-    <state width="1496" height="199" key="GridCell.Tab.0.left" timestamp="1612599415594">
+    <state width="1496" height="252" key="GridCell.Tab.0.center/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612603692598" />
+    <state width="1496" height="199" key="GridCell.Tab.0.center/0.0.1549.831@0.0.1549.831" timestamp="1612599890168" />
+    <state width="1496" height="252" key="GridCell.Tab.0.left" timestamp="1612603692598">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="199" key="GridCell.Tab.0.left/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612593872167" />
-    <state width="1496" height="199" key="GridCell.Tab.0.left/0.0.1549.831@0.0.1549.831" timestamp="1612599415594" />
-    <state width="1496" height="199" key="GridCell.Tab.0.right" timestamp="1612599415594">
+    <state width="1496" height="252" key="GridCell.Tab.0.left/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612603692598" />
+    <state width="1496" height="199" key="GridCell.Tab.0.left/0.0.1549.831@0.0.1549.831" timestamp="1612599890168" />
+    <state width="1496" height="252" key="GridCell.Tab.0.right" timestamp="1612603692598">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="199" key="GridCell.Tab.0.right/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612593872169" />
-    <state width="1496" height="199" key="GridCell.Tab.0.right/0.0.1549.831@0.0.1549.831" timestamp="1612599415594" />
+    <state width="1496" height="252" key="GridCell.Tab.0.right/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612603692598" />
+    <state width="1496" height="199" key="GridCell.Tab.0.right/0.0.1549.831@0.0.1549.831" timestamp="1612599890168" />
     <state width="1496" height="249" key="GridCell.Tab.1.bottom" timestamp="1612585115103">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
@@ -357,15 +359,15 @@
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="532" y="317" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1549.831@0.0.1549.831" timestamp="1612501544353" />
-    <state x="353" y="0" width="840" height="829" key="search.everywhere.popup" timestamp="1612592973399">
+    <state x="353" y="0" width="840" height="829" key="search.everywhere.popup" timestamp="1612601189160">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state x="353" y="0" width="840" height="829" key="search.everywhere.popup/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612592973399" />
+    <state x="353" y="0" width="840" height="829" key="search.everywhere.popup/0.0.1549.831/1920.0.1291.686@0.0.1549.831" timestamp="1612601189160" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ATM$settings.coverage" NAME="settings Coverage Results" MODIFIED="1612504524711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/conf" />
-    <SUITE FILE_PATH="coverage/ATM$src.coverage" NAME="src Coverage Results" MODIFIED="1612504832351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/ATM$src.coverage" NAME="src Coverage Results" MODIFIED="1612603099735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/ATM$fff.coverage" NAME="fff Coverage Results" MODIFIED="1612592681362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
-    <SUITE FILE_PATH="coverage/ATM$start.coverage" NAME="start Coverage Results" MODIFIED="1612599415587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ATM$start.coverage" NAME="start Coverage Results" MODIFIED="1612603692591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
