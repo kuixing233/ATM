@@ -6,6 +6,10 @@
 from interface import user_interface
 
 
+# 定义一个全局变量，保存用户登录状态
+login_user = None
+
+
 # 1、注册功能
 def register():
     while True:
@@ -31,7 +35,25 @@ def register():
 
 # 2、登录功能
 def login():
-    pass
+
+    while True:
+        username = input('请输入用户名：').strip()
+        password = input('请输入密码：').strip()
+
+        flag, msg = user_interface.login_interface(
+            username, password
+        )
+
+        if flag:
+            print(msg)
+            global login_user
+            login_user = username
+            break
+
+        else:
+            print(msg)
+
+
 # 3、查看余额
 def check_balance():
     pass

@@ -3,7 +3,6 @@
     用户接口
 """
 
-
 from db import db_handle
 
 
@@ -32,3 +31,14 @@ def register_interface(username, password, balance=15000):
     db_handle.save(user_dic)
 
     return True, f'{username} 注册成功'
+
+
+# 登录接口
+def login_interface(username, password):
+    user_dic = db_handle.select(username)
+    if user_dic:
+        if password == user_dic.get('password'):
+            return True, f'用户 [{username}] 登录成功！'
+        return False, '密码错误'
+
+    return False, '用户不存在'
