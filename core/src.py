@@ -229,10 +229,11 @@ def shopping():
         print('当前购物车：', shopping_car)
 
 
-# 9、查物车
+# 9、查看购物车
 @common.login_auth
 def check_shop_car():
-    pass
+    shop_car = user_interface.check_shop_car_interface(login_user)
+    print(shop_car)
 
 
 # 10、管理员功能

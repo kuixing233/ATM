@@ -56,3 +56,10 @@ def login_interface(username, password):
 def check_bal_interface(username):
     user_dic = db_handle.select(username)
     return user_dic['balance']
+
+
+# 查看购物车接口
+def check_shop_car_interface(username):
+    user_dic = db_handle.select(username)
+
+    return user_dic['shop_car']
