@@ -39,6 +39,10 @@ def register_interface(username, password, balance=15000):
 # 登录接口
 def login_interface(username, password):
     user_dic = db_handle.select(username)
+
+    if user_dic['locked']:
+        return False, '当前用户已被锁定'
+
     if user_dic:
         password = common.get_pwd_md5(password)
         if password == user_dic.get('password'):

@@ -21,6 +21,7 @@ def get_pwd_md5(password):
 def login_auth(func):
     from core import src
 
+
     def inner(*args, **kwargs):
         if src.login_user:
             res = func(*args, **kwargs)

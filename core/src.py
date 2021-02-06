@@ -5,6 +5,7 @@
 
 from interface import user_interface, bank_interface
 from lib import common
+from core import admin
 
 
 # 定义一个全局变量，保存用户登录状态
@@ -32,6 +33,9 @@ def register():
             # 注册失败，重新进入
             else:
                 print(msg)
+
+        else:
+            print('两次密码不一致')
 
 
 # 2、登录功能
@@ -101,7 +105,7 @@ def repay():
         input_money = int(input_money)
 
         if input_money > 0:
-            flag , msg = bank_interface.repay_interface(
+            flag, msg = bank_interface.repay_interface(
                 login_user, input_money
             )
 
@@ -142,7 +146,15 @@ def transfer():
 # 7、查看流水
 @common.login_auth
 def check_flow():
-    pass
+    flow_list = bank_interface.check_flow(
+        login_user
+    )
+
+    if flow_list:
+        for flow in flow_list:
+            print(flow)
+    else:
+        print('当前用户没有流水')
 
 
 # 8、购物功能
@@ -152,13 +164,15 @@ def shopping():
 
 
 # 9、查看购物车
+@common.login_auth
 def check_shop_car():
     pass
 
 
 # 10、管理员功能
-def admin():
-    pass
+@common.login_auth
+def admin_user():
+    admin.admin_run()
 
 
 # 创建函数功能字典：
@@ -172,7 +186,7 @@ func_dic = {
     '7': check_flow,
     '8': shopping,
     '9': check_shop_car,
-    '10': admin,
+    '10': admin_user,
 }
 
 
