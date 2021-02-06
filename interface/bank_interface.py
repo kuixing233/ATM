@@ -2,6 +2,9 @@
 银行相关业务接口
 """
 from db import db_handle
+from lib import common
+
+bank_logger = common.get_logger('bank')
 
 
 # 提现接口（手续费5%）
@@ -13,14 +16,13 @@ def withdraw_interface(username, money):
     real_money = money * 1.05
 
     if balance >= real_money:
-
         user_dic['balance'] = balance - real_money
 
         flow = f'用户：{username} 提现金额{money}成功, 手续费为：{money * 0.05}￥'
         user_dic['flow'].append(flow)
 
         db_handle.save(user_dic)
-
+        bank_logger.info(flow)
         return True, flow
 
     return False, '余额不足，请重新输入'
@@ -36,7 +38,7 @@ def repay_interface(username, money):
     user_dic['flow'].append(flow)
 
     db_handle.save(user_dic)
-
+    bank_logger.info(flow)
     return True, flow
 
 
@@ -64,8 +66,11 @@ def transfer_interface(username, to_username, money):
         db_handle.save(user_dic_to)
 
         return True, flow_now
+        bank_logger.info(flow_now)
 
-    return False, '余额不足'
+    msg = f'用户：[{username}] 给 用户：[{to_username}] 转账：{money}￥ 失败，余额不足'
+    bank_logger.warn(msg)
+    return False, msg
 
 
 # 查看流水
@@ -82,7 +87,7 @@ def pay_interface(login_user, cost):
 
         flow = f'用户消费金额[{cost}￥]'
         user_dic['flow'].append(flow)
-
+        bank_logger.info(flow)
         db_handle.save(user_dic)
         return True
     return False

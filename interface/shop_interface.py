@@ -2,6 +2,10 @@
 购物商城接口
 """
 from db import db_handle
+from lib import common
+
+
+shop_logger = common.get_logger('shop')
 
 
 # 商品准备结算接口
@@ -18,8 +22,14 @@ def shopping_interface(login_user, shopping_car):
     )
 
     if flag:
-        return True, '支付成功'
-    return False, '支付失败，金额不足'
+        msg = f'用户[{login_user} 支付 {cost}￥ 成功，准备发货]'
+        shop_logger.info(msg)
+
+        return True, msg
+
+    msg = f'用户[{login_user} 支付 {cost}￥ 失败，余额不足]'
+    shop_logger.info(msg)
+    return False, msg
 
 
 # 购物车添加接口
@@ -41,4 +51,5 @@ def add_shop_car_interface(login_user, shopping_car):
             )
 
     db_handle.save(user_dic)
-    return True, '添加购物车成功'
+    msg = f'用户[{login_user}] 添加购物车成功'
+    return True, msg

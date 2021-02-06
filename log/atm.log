@@ -1,0 +1,7 @@
+[2021-02-06 18:25:23,687][MainThread:6088][task_id:user][user_interface.py:39][INFO][用户[555] 注册成功]
+[2021-02-06 18:25:34,361][MainThread:6088][task_id:user][user_interface.py:58][WARNING][用户 [555] 密码错误,登录失败！]
+[2021-02-06 18:25:37,617][MainThread:6088][task_id:user][user_interface.py:54][INFO][用户 [555] 登录成功！]
+[2021-02-06 18:26:02,518][MainThread:6088][task_id:bank][bank_interface.py:25][INFO][用户：555 提现金额160成功, 手续费为：8.0￥]
+[2021-02-06 18:26:18,003][MainThread:6088][task_id:bank][bank_interface.py:41][INFO][用户：[555] 还款111￥ 成功, 当前额度为：14943.0]
+[2021-02-06 18:26:28,892][MainThread:6088][task_id:bank][bank_interface.py:90][INFO][用户消费金额[30￥]]
+[2021-02-06 18:26:28,894][MainThread:6088][task_id:shop][shop_interface.py:26][INFO][用户[555 支付 30￥ 成功，准备发货]]

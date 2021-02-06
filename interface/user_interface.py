@@ -6,6 +6,8 @@
 from db import db_handle
 from lib import common
 
+user_logger = common.get_logger('user')
+
 
 # 注册接口
 def register_interface(username, password, balance=15000):
@@ -33,23 +35,30 @@ def register_interface(username, password, balance=15000):
 
     db_handle.save(user_dic)
 
-    return True, f'{username} 注册成功'
+    msg = f'用户[{username}] 注册成功'
+    user_logger.info(msg)
+    return True, msg
 
 
 # 登录接口
 def login_interface(username, password):
     user_dic = db_handle.select(username)
 
-    if user_dic['locked']:
-        return False, '当前用户已被锁定'
-
     if user_dic:
+        if user_dic['locked']:
+            return False, '当前用户已被锁定'
+
         password = common.get_pwd_md5(password)
         if password == user_dic.get('password'):
-            return True, f'用户 [{username}] 登录成功！'
+            msg = f'用户 [{username}] 登录成功！'
+            user_logger.info(msg)
+            return True, msg
+
+        msg = f'用户 [{username}] 密码错误,登录失败！'
+        user_logger.warn(msg)
         return False, '密码错误'
 
-    return False, '用户不存在'
+    return False, f'用户 [{username}] 不存在,登录失败！'
 
 
 # 查看余额接口

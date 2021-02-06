@@ -4,6 +4,8 @@
 
 
 import hashlib
+import logging.config
+from conf import settings
 
 
 # md5加密
@@ -31,3 +33,16 @@ def login_auth(func):
             src.login()
 
     return inner
+
+
+# 添加日志功能
+def get_logger(log_type):
+    # 1、加载日志配置信息
+    logging.config.dictConfig(
+        settings.LOGGING_DIC
+    )
+
+    # 2、获取日志对象
+    logger = logging.getLogger(log_type)
+
+    return logger
